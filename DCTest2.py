@@ -17,42 +17,58 @@ def turnOffMotors():
 atexit.register(turnOffMotors)
 
 ################################# DC motor test!
-myMotor = mh.getMotor(1)
+L_Motor = mh.getMotor(1)
+R_Motor = mh.getMotor(1)
 
 # set the speed to start, from 0 (off) to 255 (max speed)
-myMotor.setSpeed(150)
-myMotor.run(Adafruit_MotorHAT.FORWARD);
-# turn on motor
-myMotor.run(Adafruit_MotorHAT.RELEASE);
+L_Motor.setSpeed(255)
+L_Motor.run(Adafruit_MotorHAT.FORWARD);
 
+R_Motor.setSpeed(255)
+R_Motor.run(Adafruit_MotorHAT.FORWARD);
+
+# turn on motors
+L_Motor.run(Adafruit_MotorHAT.RELEASE);
+R_Motor.run(Adafruit_MotorHAT.RELEASE);
 
 while (True):
 	print "Forward! "
-	myMotor.run(Adafruit_MotorHAT.FORWARD)
+	L_Motor.run(Adafruit_MotorHAT.FORWARD)
+    R_Motor.run(Adafruit_MotorHAT.FORWARD)
 
 	print "\tSpeed up..."
 	for i in range(255):
-		myMotor.setSpeed(i)
-		time.sleep(0.01)
+		L_Motor.setSpeed(i)
+		R_Motor.setSpeed(i)
+        time.sleep(0.01)
 
-	print "\tSlow down..."
+    time.sleep(0.5)
+
+    print "\tSlow down..."
 	for i in reversed(range(255)):
-		myMotor.setSpeed(i)
-		time.sleep(0.01)
+		L_Motor.setSpeed(i)
+		R_Motor.setSpeed(i)
+        time.sleep(0.01)
 
 	print "Backward! "
-	myMotor.run(Adafruit_MotorHAT.BACKWARD)
+	L_Motor.run(Adafruit_MotorHAT.BACKWARD)
+	R_Motor.run(Adafruit_MotorHAT.BACKWARD)
 
 	print "\tSpeed up..."
 	for i in range(255):
-		myMotor.setSpeed(i)
+        L_Motor.setSpeed(i)
+        R_Motor.setSpeed(i)
 		time.sleep(0.01)
 
+    time.sleep(0.5)
+    
 	print "\tSlow down..."
 	for i in reversed(range(255)):
-		myMotor.setSpeed(i)
+        L_Motor.setSpeed(i)
+		R_Motor.setSpeed(i)
 		time.sleep(0.01)
 
 	print "Release"
-	myMotor.run(Adafruit_MotorHAT.RELEASE)
+	L_Motor.run(Adafruit_MotorHAT.RELEASE)
+    R_Motor.run(Adafruit_MotorHAT.RELEASE)
 	time.sleep(1.0)
