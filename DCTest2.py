@@ -38,7 +38,7 @@ def go_forward(timeValue):
     R_Motor.setSpeed(255)
     time.sleep(timeValue)
 
-go_forward(10)
+go_forward(2)
 
 while (False):
 	print "Forward! "
