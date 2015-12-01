@@ -17,8 +17,8 @@ def turnOffMotors():
 atexit.register(turnOffMotors)
 
 ################################# DC motor test!
-L_Motor = mh.getMotor(1)
-R_Motor = mh.getMotor(2)
+L_Motor = mh.getMotor(2)
+R_Motor = mh.getMotor(1)
 
 # set the speed to start, from 0 (off) to 255 (max speed)
 L_Motor.setSpeed(255)
@@ -45,8 +45,15 @@ def rotate_left(timeValue):
     R_Motor.setSpeed(255)
     time.sleep(timeValue)
 
+def turn_left(timeValue):
+    L_Motor.run(Adafruit_MotorHAT.FORWARD)
+    R_Motor.run(Adafruit_MotorHAT.FORWARD)
+    L_Motor.setSpeed(150)
+    R_Motor.setSpeed(255)
+    time.sleep(timeValue)
 
-rotate_left(2)
+
+turn_left(1)
 
 while (False):
 	print "Forward! "
