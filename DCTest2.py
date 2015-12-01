@@ -18,7 +18,7 @@ atexit.register(turnOffMotors)
 
 ################################# DC motor test!
 L_Motor = mh.getMotor(1)
-R_Motor = mh.getMotor(1)
+R_Motor = mh.getMotor(2)
 
 # set the speed to start, from 0 (off) to 255 (max speed)
 L_Motor.setSpeed(255)
