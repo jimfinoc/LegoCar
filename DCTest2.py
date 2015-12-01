@@ -48,7 +48,7 @@ def rotate_left(timeValue):
 def turn_left(timeValue):
     L_Motor.run(Adafruit_MotorHAT.FORWARD)
     R_Motor.run(Adafruit_MotorHAT.FORWARD)
-    L_Motor.setSpeed(150)
+    L_Motor.setSpeed(50)
     R_Motor.setSpeed(255)
     time.sleep(timeValue)
 
