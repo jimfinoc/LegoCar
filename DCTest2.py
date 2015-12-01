@@ -31,6 +31,15 @@ R_Motor.run(Adafruit_MotorHAT.FORWARD);
 L_Motor.run(Adafruit_MotorHAT.RELEASE);
 R_Motor.run(Adafruit_MotorHAT.RELEASE);
 
+def go_forward(timeValue):
+    L_Motor.run(Adafruit_MotorHAT.FORWARD)
+    R_Motor.run(Adafruit_MotorHAT.FORWARD)
+    L_Motor.setSpeed(100)
+    R_Motor.setSpeed(100)
+    time.sleep(timeValue)
+
+go_forward(10)
+
 while (True):
 	print "Forward! "
 	L_Motor.run(Adafruit_MotorHAT.FORWARD)
