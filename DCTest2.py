@@ -52,8 +52,16 @@ def turn_left(timeValue):
     R_Motor.setSpeed(255)
     time.sleep(timeValue)
 
+def turn_right(timeValue):
+    L_Motor.run(Adafruit_MotorHAT.FORWARD)
+    R_Motor.run(Adafruit_MotorHAT.FORWARD)
+    L_Motor.setSpeed(255)
+    R_Motor.setSpeed(50)
+    time.sleep(timeValue)
+
 
 turn_left(1)
+turn_right(1)
 
 while (False):
 	print "Forward! "
