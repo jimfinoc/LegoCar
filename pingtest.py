@@ -11,7 +11,7 @@ def write(value):
 
 def lightlevel():
     light = bus.read_byte_data(address, 1)
-        return light
+    return light
 
 def range():
     range1 = bus.read_byte_data(address, 2)
