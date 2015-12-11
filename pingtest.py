@@ -7,7 +7,7 @@ address = 0x70
 
 def write(value):
     bus.write_byte_data(address, 0, value)
-        return -1
+    return -1
 
 def lightlevel():
     light = bus.read_byte_data(address, 1)
