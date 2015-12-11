@@ -1,6 +1,6 @@
 import smbus
 import time
-bus = smbus.SMBus(0)
+bus = smbus.SMBus(1)
 address = 0x70
 
 #SRF08 REQUIRES 5V
