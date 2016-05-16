@@ -59,9 +59,16 @@ def turn_right(timeValue):
     R_Motor.setSpeed(50)
     time.sleep(timeValue)
 
+def slow_forward_stop(timeValue):
+    L_Motor.run(Adafruit_MotorHAT.FORWARD)
+    R_Motor.run(Adafruit_MotorHAT.FORWARD)
+    L_Motor.setSpeed(255)
+    R_Motor.setSpeed(50)
+    time.sleep(timeValue)
 
 turn_left(1)
 turn_right(1)
+slow_forward_stop(2)
 
 while (False):
 	print "Forward! "
@@ -90,7 +97,7 @@ while (False):
         	L_Motor.setSpeed(i)
 		R_Motor.setSpeed(i)
 		time.sleep(0.01)
-    
+
 	print "\tSlow down..."
 	for i in reversed(range(255)):
         	L_Motor.setSpeed(i)
