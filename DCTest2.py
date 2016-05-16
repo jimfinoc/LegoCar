@@ -41,15 +41,15 @@ def go_forward(timeValue):
 def rotate_left(timeValue):
     L_Motor.run(Adafruit_MotorHAT.BACKWARD)
     R_Motor.run(Adafruit_MotorHAT.FORWARD)
-    L_Motor.setSpeed(50)
-    R_Motor.setSpeed(50)
+    L_Motor.setSpeed(250)
+    R_Motor.setSpeed(250)
     time.sleep(timeValue)
 
 def rotate_right(timeValue):
     L_Motor.run(Adafruit_MotorHAT.FORWARD)
     R_Motor.run(Adafruit_MotorHAT.BACKWARD)
-    L_Motor.setSpeed(50)
-    R_Motor.setSpeed(50)
+    L_Motor.setSpeed(250)
+    R_Motor.setSpeed(250)
     time.sleep(timeValue)
 
 def turn_left(timeValue):
