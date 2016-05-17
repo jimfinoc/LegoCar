@@ -78,7 +78,19 @@ def slow_forward_stop(timeValue):
 # slow_forward_stop(1)
 # turn_right(1)
 # turn_left(1)
-go_forward(1, 50)
+go_forward(.3, 75)
+go_forward(.3, 125)
+go_forward(.3, 150)
+go_forward(.3, 175)
+go_forward(.3, 200)
+go_forward(.3, 225)
+go_forward(.3, 250)
+go_forward(.3, 225)
+go_forward(.3, 200)
+go_forward(.3, 175)
+go_forward(.3, 150)
+go_forward(.3, 125)
+go_forward(.3, 75)
 
 while (False):
 	print "Forward! "
