@@ -73,9 +73,12 @@ def slow_forward_stop(timeValue):
     R_Motor.setSpeed(25)
     time.sleep(timeValue)
 
-rotate_left(2)
-rotate_right(2)
-slow_forward_stop(.25)
+rotate_left(1)
+rotate_right(1)
+slow_forward_stop(1)
+turn_right(1)
+turn_left(1)
+go_forward(1)
 
 while (False):
 	print "Forward! "
