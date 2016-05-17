@@ -78,7 +78,7 @@ def slow_forward_stop(timeValue):
 # slow_forward_stop(1)
 # turn_right(1)
 # turn_left(1)
-go_forward(1, 25)
+go_forward(1, 50)
 
 while (False):
 	print "Forward! "
