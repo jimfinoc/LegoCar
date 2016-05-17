@@ -31,11 +31,11 @@ R_Motor.run(Adafruit_MotorHAT.FORWARD);
 L_Motor.run(Adafruit_MotorHAT.RELEASE);
 R_Motor.run(Adafruit_MotorHAT.RELEASE);
 
-def go_forward(timeValue):
+def go_forward(timeValue = 1, speed = 100):
     L_Motor.run(Adafruit_MotorHAT.FORWARD)
     R_Motor.run(Adafruit_MotorHAT.FORWARD)
-    L_Motor.setSpeed(255)
-    R_Motor.setSpeed(255)
+    L_Motor.setSpeed(speed)
+    R_Motor.setSpeed(speed)
     time.sleep(timeValue)
 
 def rotate_left(timeValue):
@@ -73,12 +73,12 @@ def slow_forward_stop(timeValue):
     R_Motor.setSpeed(25)
     time.sleep(timeValue)
 
-rotate_left(1)
-rotate_right(1)
-slow_forward_stop(1)
-turn_right(1)
-turn_left(1)
-go_forward(1)
+# rotate_left(1)
+# rotate_right(1)
+# slow_forward_stop(1)
+# turn_right(1)
+# turn_left(1)
+go_forward(1, 25)
 
 while (False):
 	print "Forward! "
