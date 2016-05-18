@@ -114,9 +114,9 @@ while (cmd!="q"):
 	cmd = raw_input("Enter command: ")
 	if cmd == "f":
 		print "f"
-	elif cmd == "lr"
+	elif cmd == "lr":
 		print "lr"
-	elif cmd == "rr"
+	elif cmd == "rr":
 		print "rr"
 	# command(cmd)
 
