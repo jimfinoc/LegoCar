@@ -80,8 +80,10 @@ def command(argument):
         "rl": rotate_left(1),
         "rr": rotate_right(1),
         "f":  go_forward(1),
+		"q":
     }
-    return decision.get(argument, lambda: "nothing")
+    function = decision.get(argument, lambda: "nothing")
+	return function()
 
 # rotate_left(3)
 # rotate_right(3)
