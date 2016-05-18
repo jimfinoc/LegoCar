@@ -73,24 +73,40 @@ def slow_forward_stop(timeValue = 1, speed = 100):
     R_Motor.setSpeed(speed)
     time.sleep(timeValue)
 
-rotate_left(3)
-rotate_right(3)
-# slow_forward_stop(1)
-turn_right(2)
-turn_left(2)
-go_forward(.1, 75)
-go_forward(.1, 125)
-go_forward(.1, 150)
-go_forward(.1, 175)
-go_forward(.1, 200)
-go_forward(.1, 225)
-go_forward(.1, 250)
-go_forward(.1, 225)
-go_forward(.1, 200)
-go_forward(.1, 175)
-go_forward(.1, 150)
-go_forward(.1, 125)
-go_forward(.1, 75)
+def command(argument):
+    decision = {
+        "tl": turn_left(1),
+        "tr": turn_right(1),
+        "rl": rotate_left(1),
+        "rr": rotate_right(1),
+        "f":  go_forward(1),
+    }
+    return decision.get(argument, "nothing")
+
+# rotate_left(3)
+# rotate_right(3)
+# # slow_forward_stop(1)
+# turn_right(2)
+# turn_left(2)
+# go_forward(.1, 75)
+# go_forward(.1, 125)
+# go_forward(.1, 150)
+# go_forward(.1, 175)
+# go_forward(.1, 200)
+# go_forward(.1, 225)
+# go_forward(.1, 250)
+# go_forward(.1, 225)
+# go_forward(.1, 200)
+# go_forward(.1, 175)
+# go_forward(.1, 150)
+# go_forward(.1, 125)
+# go_forward(.1, 75)
+
+cmd = ""
+print "type q to quit"
+while (cmd!="q"):
+	cmd = input("Enter command: ")
+
 
 # while (False):
 # 	print "Forward! "
