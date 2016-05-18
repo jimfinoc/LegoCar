@@ -107,6 +107,7 @@ cmd = ""
 print "type q to quit"
 while (cmd!="q"):
 	cmd = raw_input("Enter command: ")
+	command(cmd)
 
 
 # while (False):
