@@ -32,6 +32,7 @@ L_Motor.run(Adafruit_MotorHAT.RELEASE);
 R_Motor.run(Adafruit_MotorHAT.RELEASE);
 
 def go_forward(timeValue = 1, speed = 100):
+	print"go_forward"
     L_Motor.run(Adafruit_MotorHAT.FORWARD)
     R_Motor.run(Adafruit_MotorHAT.FORWARD)
     L_Motor.setSpeed(speed)
@@ -39,6 +40,7 @@ def go_forward(timeValue = 1, speed = 100):
     time.sleep(timeValue)
 
 def rotate_left(timeValue = 1, speed = 100):
+	print"rotate_left"
     L_Motor.run(Adafruit_MotorHAT.BACKWARD)
     R_Motor.run(Adafruit_MotorHAT.FORWARD)
     L_Motor.setSpeed(speed)
@@ -46,6 +48,7 @@ def rotate_left(timeValue = 1, speed = 100):
     time.sleep(timeValue)
 
 def rotate_right(timeValue = 1, speed = 100):
+	print"rotate_right"
     L_Motor.run(Adafruit_MotorHAT.FORWARD)
     R_Motor.run(Adafruit_MotorHAT.BACKWARD)
     L_Motor.setSpeed(speed)
@@ -53,6 +56,7 @@ def rotate_right(timeValue = 1, speed = 100):
     time.sleep(timeValue)
 
 def turn_left(timeValue = 1, speed = 100):
+	print"turn_left"
     L_Motor.run(Adafruit_MotorHAT.FORWARD)
     R_Motor.run(Adafruit_MotorHAT.FORWARD)
     L_Motor.setSpeed(speed/4)
@@ -60,6 +64,7 @@ def turn_left(timeValue = 1, speed = 100):
     time.sleep(timeValue)
 
 def turn_right(timeValue = 1, speed = 100):
+	print"turn_right"
     L_Motor.run(Adafruit_MotorHAT.FORWARD)
     R_Motor.run(Adafruit_MotorHAT.FORWARD)
     L_Motor.setSpeed(speed)
