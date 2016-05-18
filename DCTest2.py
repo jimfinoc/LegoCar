@@ -112,7 +112,12 @@ cmd = ""
 print "type q to quit"
 while (cmd!="q"):
 	cmd = raw_input("Enter command: ")
-	command(cmd)
+	if cmd = "f":
+		print "f"
+	elif cmd == "lr"
+		print "lr"
+
+	# command(cmd)
 
 
 # while (False):
