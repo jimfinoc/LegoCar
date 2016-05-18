@@ -79,6 +79,12 @@ def slow_to_a_stop(timeValue = 1, speed = 100):
 			R_Motor.setSpeed(i)
 			time.sleep(0.01)
 
+def stop(timeValue = 1, speed = 100):
+	L_Motor.run(Adafruit_MotorHAT.FORWARD)
+	R_Motor.run(Adafruit_MotorHAT.FORWARD)
+	L_Motor.setSpeed(0)
+	R_Motor.setSpeed(0)
+
 # def command(argument):
 # 	decision = {
 # 		"tl": turn_left(1),
@@ -122,6 +128,8 @@ while (cmd!="q"):
 		rotate_left()
 	elif cmd == "s":
 		slow_to_a_stop()
+	elif cmd == "ss":
+		stop()
 	# command(cmd)
 
 
