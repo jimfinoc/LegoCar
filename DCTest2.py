@@ -113,11 +113,11 @@ print "type q to quit"
 while (cmd!="q"):
 	cmd = raw_input("Enter command: ")
 	if cmd == "f":
-		print "f"
+		go_forward()
 	elif cmd == "lr":
-		print "lr"
+		rotate_left()
 	elif cmd == "rr":
-		print "rr"
+		rotate_left()
 	# command(cmd)
 
 
