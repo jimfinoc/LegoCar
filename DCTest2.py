@@ -38,46 +38,46 @@ def go_forward(timeValue = 1, speed = 100):
     R_Motor.setSpeed(speed)
     time.sleep(timeValue)
 
-def rotate_left(timeValue):
+def rotate_left(timeValue = 1, speed = 100):
     L_Motor.run(Adafruit_MotorHAT.BACKWARD)
     R_Motor.run(Adafruit_MotorHAT.FORWARD)
-    L_Motor.setSpeed(250)
-    R_Motor.setSpeed(250)
+    L_Motor.setSpeed(speed)
+    R_Motor.setSpeed(speed)
     time.sleep(timeValue)
 
-def rotate_right(timeValue):
+def rotate_right(timeValue = 1, speed = 100):
     L_Motor.run(Adafruit_MotorHAT.FORWARD)
     R_Motor.run(Adafruit_MotorHAT.BACKWARD)
     L_Motor.setSpeed(250)
     R_Motor.setSpeed(250)
     time.sleep(timeValue)
 
-def turn_left(timeValue):
+def turn_left(timeValue = 1, speed = 100):
     L_Motor.run(Adafruit_MotorHAT.FORWARD)
     R_Motor.run(Adafruit_MotorHAT.FORWARD)
-    L_Motor.setSpeed(50)
-    R_Motor.setSpeed(255)
+    L_Motor.setSpeed(speed/2)
+    R_Motor.setSpeed(speed)
     time.sleep(timeValue)
 
-def turn_right(timeValue):
+def turn_right(timeValue = 1, speed = 100):
     L_Motor.run(Adafruit_MotorHAT.FORWARD)
     R_Motor.run(Adafruit_MotorHAT.FORWARD)
-    L_Motor.setSpeed(255)
-    R_Motor.setSpeed(50)
+    L_Motor.setSpeed(speed)
+    R_Motor.setSpeed(speed/2)
     time.sleep(timeValue)
 
-def slow_forward_stop(timeValue):
+def slow_forward_stop(timeValue = 1, speed = 100):
     L_Motor.run(Adafruit_MotorHAT.FORWARD)
     R_Motor.run(Adafruit_MotorHAT.FORWARD)
-    L_Motor.setSpeed(25)
-    R_Motor.setSpeed(25)
+    L_Motor.setSpeed(speed)
+    R_Motor.setSpeed(speed)
     time.sleep(timeValue)
 
-# rotate_left(1)
-# rotate_right(1)
-# slow_forward_stop(1)
-# turn_right(1)
-# turn_left(1)
+rotate_left(1)
+rotate_right(1)
+slow_forward_stop(1)
+turn_right(1)
+turn_left(1)
 go_forward(.3, 75)
 go_forward(.3, 125)
 go_forward(.3, 150)
@@ -116,17 +116,17 @@ while (False):
 
 	print "\tSpeed up..."
 	for i in range(255):
-        	L_Motor.setSpeed(i)
+    	L_Motor.setSpeed(i)
 		R_Motor.setSpeed(i)
 		time.sleep(0.01)
 
 	print "\tSlow down..."
 	for i in reversed(range(255)):
-        	L_Motor.setSpeed(i)
+    	L_Motor.setSpeed(i)
 		R_Motor.setSpeed(i)
 		time.sleep(0.01)
 
 	print "Release"
 	L_Motor.run(Adafruit_MotorHAT.RELEASE)
-    	R_Motor.run(Adafruit_MotorHAT.RELEASE)
+    R_Motor.run(Adafruit_MotorHAT.RELEASE)
 	time.sleep(1.0)
