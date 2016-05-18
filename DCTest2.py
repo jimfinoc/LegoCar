@@ -82,7 +82,7 @@ def command(argument):
         "f":  go_forward(1),
     }
     function = decision.get(argument, lambda: "nothing")
-	return function()
+    return function()
 
 # rotate_left(3)
 # rotate_right(3)
@@ -106,7 +106,7 @@ def command(argument):
 cmd = ""
 print "type q to quit"
 while (cmd!="q"):
-	cmd = input("Enter command: ")
+	cmd = raw_input("Enter command: ")
 
 
 # while (False):
