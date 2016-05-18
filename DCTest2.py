@@ -92,41 +92,41 @@ go_forward(.3, 150)
 go_forward(.3, 125)
 go_forward(.3, 75)
 
-while (False):
-	print "Forward! "
-	L_Motor.run(Adafruit_MotorHAT.FORWARD)
-	R_Motor.run(Adafruit_MotorHAT.FORWARD)
-
-	print "\tSpeed up..."
-	for i in range(255):
-		L_Motor.setSpeed(i)
-		R_Motor.setSpeed(i)
-		time.sleep(0.01)
-
-	print "\tSlow down..."
-	for i in reversed(range(255)):
-		L_Motor.setSpeed(i)
-		R_Motor.setSpeed(i)
-        time.sleep(0.01)
-
-	time.sleep(5)
-	print "Backward! "
-	L_Motor.run(Adafruit_MotorHAT.BACKWARD)
-	R_Motor.run(Adafruit_MotorHAT.BACKWARD)
-
-	print "\tSpeed up..."
-	for i in range(255):
-    	L_Motor.setSpeed(i)
-		R_Motor.setSpeed(i)
-		time.sleep(0.01)
-
-	print "\tSlow down..."
-	for i in reversed(range(255)):
-    	L_Motor.setSpeed(i)
-		R_Motor.setSpeed(i)
-		time.sleep(0.01)
-
-	print "Release"
-	L_Motor.run(Adafruit_MotorHAT.RELEASE)
-    R_Motor.run(Adafruit_MotorHAT.RELEASE)
-	time.sleep(1.0)
+# while (False):
+# 	print "Forward! "
+# 	L_Motor.run(Adafruit_MotorHAT.FORWARD)
+# 	R_Motor.run(Adafruit_MotorHAT.FORWARD)
+#
+# 	print "\tSpeed up..."
+# 	for i in range(255):
+# 		L_Motor.setSpeed(i)
+# 		R_Motor.setSpeed(i)
+# 		time.sleep(0.01)
+#
+# 	print "\tSlow down..."
+# 	for i in reversed(range(255)):
+# 		L_Motor.setSpeed(i)
+# 		R_Motor.setSpeed(i)
+#         time.sleep(0.01)
+#
+# 	time.sleep(5)
+# 	print "Backward! "
+# 	L_Motor.run(Adafruit_MotorHAT.BACKWARD)
+# 	R_Motor.run(Adafruit_MotorHAT.BACKWARD)
+#
+# 	print "\tSpeed up..."
+# 	for i in range(255):
+#     	L_Motor.setSpeed(i)
+# 		R_Motor.setSpeed(i)
+# 		time.sleep(0.01)
+#
+# 	print "\tSlow down..."
+# 	for i in reversed(range(255)):
+#     	L_Motor.setSpeed(i)
+# 		R_Motor.setSpeed(i)
+# 		time.sleep(0.01)
+#
+# 	print "Release"
+# 	L_Motor.run(Adafruit_MotorHAT.RELEASE)
+#     R_Motor.run(Adafruit_MotorHAT.RELEASE)
+# 	time.sleep(1.0)
