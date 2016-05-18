@@ -71,23 +71,25 @@ def turn_right(timeValue = 1, speed = 100):
 	R_Motor.setSpeed(speed/4)
 	time.sleep(timeValue)
 
-def slow_forward_stop(timeValue = 1, speed = 100):
+def slow_to_a_stop(timeValue = 1, speed = 100):
 	L_Motor.run(Adafruit_MotorHAT.FORWARD)
 	R_Motor.run(Adafruit_MotorHAT.FORWARD)
-	L_Motor.setSpeed(speed)
-	R_Motor.setSpeed(speed)
-	time.sleep(timeValue)
+	for i in reversed(range(255)):
+		 	L_Motor.setSpeed(i)
+			R_Motor.setSpeed(i)
+			time.sleep(0.01)
 
-def command(argument):
-	decision = {
-		"tl": turn_left(1),
-		"tr": turn_right(1),
-		"rl": rotate_left(1),
-		"rr": rotate_right(1),
-		"f":  go_forward(1),
-	}
-	function = decision.get(argument, lambda: "nothing")
-	return function()
+# def command(argument):
+# 	decision = {
+# 		"tl": turn_left(1),
+# 		"tr": turn_right(1),
+# 		"rl": rotate_left(1),
+# 		"rr": rotate_right(1),
+# 		"f":  go_forward(1),
+#
+# 	}
+# 	function = decision.get(argument, lambda: "nothing")
+# 	return function()
 
 # rotate_left(3)
 # rotate_right(3)
@@ -118,6 +120,8 @@ while (cmd!="q"):
 		rotate_left()
 	elif cmd == "rr":
 		rotate_left()
+	elif cmd == "s":
+		slow_to_a_stop()
 	# command(cmd)
 
 
