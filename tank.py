@@ -189,4 +189,4 @@ print('Accel X={0}, Accel Y={1}, Accel Z={2}, Mag X={3}, Mag Y={4}, Mag Z={5}'.f
 time.sleep(0.5)
 
 heading = (math.atan2(mag_y,mag_x) * 180) / math.pi;
-print('Heading = {:06.2f}'.format(heading))
+print('Heading = {:03.0f}'.format(heading))
