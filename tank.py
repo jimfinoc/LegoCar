@@ -187,4 +187,4 @@ print('Accel X={0}, Accel Y={1}, Accel Z={2}, Mag X={3}, Mag Y={4}, Mag Z={5}'.f
 # Wait half a second and repeat.
 time.sleep(0.5)
 
-heading = (atan2(event.magnetic.y,event.magnetic.x) * 180) / Pi;
+heading = (math.atan2(mag_y,mag_x) * 180) / math.pi;
