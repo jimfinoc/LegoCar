@@ -114,24 +114,24 @@ def stop(timeValue = 1, speed = 100):
 # go_forward(.1, 125)
 # go_forward(.1, 75)
 
-cmd = ""
-print "type q to quit"
-while (cmd!="q"):
-	cmd = raw_input("Enter command: ")
-	if cmd == "f":
-		go_forward(1,240)
-	elif cmd == "rl":
-		rotate_left(1,240)
-	elif cmd == "rr":
-		rotate_right(1,240)
-	elif cmd == "tr":
-		turn_right(1,150)
-	elif cmd == "tl":
-		turn_left(1,150)
-	elif cmd == "s":
-		slow_to_a_stop()
-	elif cmd == "ss":
-		stop()
+# cmd = ""
+# print "type q to quit"
+# while (cmd!="q"):
+# 	cmd = raw_input("Enter command: ")
+# 	if cmd == "f":
+# 		go_forward(1,240)
+# 	elif cmd == "rl":
+# 		rotate_left(1,240)
+# 	elif cmd == "rr":
+# 		rotate_right(1,240)
+# 	elif cmd == "tr":
+# 		turn_right(1,150)
+# 	elif cmd == "tl":
+# 		turn_left(1,150)
+# 	elif cmd == "s":
+# 		slow_to_a_stop()
+# 	elif cmd == "ss":
+# 		stop()
 	# command(cmd)
 
 
@@ -173,3 +173,15 @@ while (cmd!="q"):
 # 	L_Motor.run(Adafruit_MotorHAT.RELEASE)
 #	 R_Motor.run(Adafruit_MotorHAT.RELEASE)
 # 	time.sleep(1.0)
+
+print('Printing accelerometer & magnetometer X, Y, Z axis values.')
+# Read the X, Y, Z axis acceleration values and print them.
+accel, mag = lsm303.read()
+# Grab the X, Y, Z components from the reading and print them out.
+accel_x, accel_y, accel_z = accel
+mag_x, mag_y, mag_z = mag
+print('Accel X={0}, Accel Y={1}, Accel Z={2}, Mag X={3}, Mag Y={4}, Mag Z={5}'.format(accel_x, accel_y, accel_z, mag_x, mag_y, mag_z))
+# Wait half a second and repeat.
+time.sleep(0.5)
+
+heading = (atan2(event.magnetic.y,event.magnetic.x) * 180) / Pi;
