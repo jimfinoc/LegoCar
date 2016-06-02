@@ -3,9 +3,12 @@ from Adafruit_MotorHAT import Adafruit_MotorHAT, Adafruit_DCMotor
 
 import time
 import atexit
+import Adafruit_LSM303
+
 
 # create a default object, no changes to I2C address or frequency
 mh = Adafruit_MotorHAT(addr=0x60)
+lsm303 = Adafruit_LSM303.LSM303()
 
 # recommended for auto-disabling motors on shutdown!
 def turnOffMotors():
