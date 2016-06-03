@@ -180,7 +180,7 @@ def stop(timeValue = 1, speed = 100):
 
 print('Printing accelerometer & magnetometer X, Y, Z axis values.')
 # Read the X, Y, Z axis acceleration values and print them.
-while(true):
+while(True):
 	accel, mag = lsm303.read()
 	# Grab the X, Y, Z components from the reading and print them out.
 	accel_x, accel_y, accel_z = accel
