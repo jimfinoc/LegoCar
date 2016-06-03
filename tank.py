@@ -187,6 +187,6 @@ while(True):
 	mag_x, mag_y, mag_z = mag
 	print('Accel X={0}, Accel Y={1}, Accel Z={2}, Mag X={3}, Mag Y={4}, Mag Z={5}'.format(accel_x, accel_y, accel_z, mag_x, mag_y, mag_z)),
 	heading = math.atan(mag_y/mag_x) * 180 / math.pi
-	print('Heading = {:03.0f}'.format(heading))
+	print('Heading = {:04.1f}'.format(heading))
 	# Wait half a second and repeat.
-	time.sleep(0.1)
+	time.sleep(0.2)
