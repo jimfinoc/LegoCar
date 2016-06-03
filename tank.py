@@ -180,12 +180,13 @@ def stop(timeValue = 1, speed = 100):
 
 print('Printing accelerometer & magnetometer X, Y, Z axis values.')
 # Read the X, Y, Z axis acceleration values and print them.
-accel, mag = lsm303.read()
-# Grab the X, Y, Z components from the reading and print them out.
-accel_x, accel_y, accel_z = accel
-mag_x, mag_y, mag_z = mag
-print('Accel X={0}, Accel Y={1}, Accel Z={2}, Mag X={3}, Mag Y={4}, Mag Z={5}'.format(accel_x, accel_y, accel_z, mag_x, mag_y, mag_z)),
-heading = math.atan(mag_y/mag_x) * 180 / math.pi
-print('Heading = {:03.0f}'.format(heading))
-# Wait half a second and repeat.
-time.sleep(0.5)
+while(true)
+	accel, mag = lsm303.read()
+	# Grab the X, Y, Z components from the reading and print them out.
+	accel_x, accel_y, accel_z = accel
+	mag_x, mag_y, mag_z = mag
+	print('Accel X={0}, Accel Y={1}, Accel Z={2}, Mag X={3}, Mag Y={4}, Mag Z={5}'.format(accel_x, accel_y, accel_z, mag_x, mag_y, mag_z)),
+	heading = math.atan(mag_y/mag_x) * 180 / math.pi
+	print('Heading = {:03.0f}'.format(heading))
+	# Wait half a second and repeat.
+	time.sleep(0.1)
